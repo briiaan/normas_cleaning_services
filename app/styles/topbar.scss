@@ -1,0 +1,64 @@
+@use "variables" as v;
+@import 'default';
+
+#topbar-container {
+    display: none;
+}
+
+@media (min-width: v.$big-width) {
+    #topbar-container {
+        position: relative;
+        top: 0px;
+        background: var(--topbar-darkgrayish-color);
+        display: flex;
+        place-content: center;
+        #topbar-center {
+            height: 38px;
+            display: grid;
+            place-content: center;
+        #topbar-flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    
+    }
+    
+    #phone-number-topbar {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        padding-left: 50px;
+        #number-container-topbar {
+            #number-a-container {
+                padding-left: 10px;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 17.5px;
+                    position: relative;
+                }
+            }
+        }
+    }
+    
+    #email-topbar {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        #email-container-topbar {
+            #email-a-container {
+                padding-left: 10px;
+            a {
+                position: relative;
+                text-decoration: none;
+                color: white;
+                font-size: 17.5px;
+            }
+        }
+        }
+    }
+    
+    .icon {
+        display: grid;
+        place-self: center;
+    }
+}

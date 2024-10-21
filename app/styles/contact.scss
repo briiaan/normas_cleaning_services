@@ -1,0 +1,237 @@
+@use "variables" as v;
+
+#contact-announcement {
+    position: absolute;
+}
+
+.error-validation {
+    border: 3px solid rgb(196, 8, 8) !important;
+}
+
+.popover {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--green-s1-color);
+    padding-top: 2px;
+    height: 4px;
+}
+
+.popover-visible {
+    color: rgb(196, 8, 8);
+}
+
+#contact-title {
+    padding: 0 0 30px 0;
+    font-size: 40px;
+    font-weight: v.$fw-medium;
+    justify-self: start;
+    width: 100%;
+}
+#contact-form-container-grid {
+    display: grid;
+    place-content: center;
+    padding-bottom: 50px;
+    #contact-form-container-inner {
+        max-width: 1000px;
+        width: 90vw;
+        display: grid;
+        justify-content: center;
+        position: relative;
+        #contact-form {
+            background-color: var(--green-s1-color);
+            display: grid;
+            border-radius: 5px;
+            gap: 15px;
+            width: 100%;
+            place-content: center;
+            position: relative;
+            height: fit-content;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding: 60px 20px 60px 20px;
+            max-width: fit-content;
+            @media (min-width: v.$contact-form-small-width) {
+                width: fit-content;
+                max-width: 1000px;
+                height: 430px;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                padding: 60px 20px 60px 20px;
+            }
+            #first-section {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                height: fit-content;
+                gap: 10px;
+                #first-name-input {
+                    display: grid;
+                    place-content: center;
+                    margin-bottom: 5px;
+                    @media (min-width: v.$contact-form-small-width) {
+                        display: block;
+                        margin-bottom: 0px;
+                    }
+                }
+                #last-name-input {
+                    display: grid;
+                    place-content: center;
+                    gap:15px;
+                    place-content: center;
+                    color: #767950;    
+                    @media (min-width: v.$contact-form-small-width) {
+                        display: block;
+                    }
+                }
+                @media (min-width: v.$contact-form-small-width) {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr;
+                }
+                input {
+                    padding: 10px 10px;
+                    border: 2px solid #E6EDC5;
+                    background: #E6EDC5;
+                    border-radius: 5px;
+                    color: #767950;
+                    font-weight: v.$fw-bold;
+                    font-size: 17px;
+                    width: 80vw;
+                    height: fit-content;
+                    @media (min-width: v.$contact-form-small-width) {
+                        width: fit-content;
+                    }
+                }
+                input::placeholder {
+                    color: #767950;
+                    font-weight: v.$fw-bold;
+                    font-size: 17px;
+                }
+                input:focus {
+                    color: #767950;
+                    outline: solid;
+                    border: 1px solid white;
+                }
+            }
+            #second-section {
+                @extend #first-section;
+                #email-input {
+                    margin-bottom: 5px;
+                    display: grid;
+                    place-content: center;
+                    @media (min-width: v.$contact-form-small-width) {
+                        display: block;
+                        margin-bottom: 0px;
+                    }
+                }
+                #phone-input {
+                    display: grid;
+                    place-content: center;
+                    @media (min-width: v.$contact-form-small-width) {
+                        display: block;
+                    }
+                }
+                input {
+                    background: #8D985E;    
+                    color: white;   
+                    border: 2px solid #8D985E;         
+                }
+                input::placeholder {
+                    color: white;
+                }
+                input:focus {
+                    color: white;
+                }
+            }
+            #third-section {
+                display: none;
+                @media (min-width: v.$contact-form-small-width) {
+                    display: grid;
+                }
+                @extend #first-section;
+                input {
+                    background: #767950;
+                    color: white;
+                    border: 2px solid #767950;         
+                }
+                input::placeholder {
+                    color: white;
+                }
+                input:focus {
+                    color: white;
+                }
+            }
+            #fourth-section {
+                width: 100%;
+                display: grid;
+                place-content: center;                
+                #message-input {
+                    textarea {
+                        width: 80vw;
+                        height: 190px;
+                        border: none;
+                        padding: 10px 10px;
+                        background: #676F47;
+                        border: 2px solid #676F47;         
+                        border-radius: 5px;
+                        color: white;
+                        font-weight: v.$fw-bold;
+                        font-size: 17px;
+                        @media (min-width: v.$contact-form-small-width) {
+                            width: 480px;
+                        }
+                    }
+                    textarea::placeholder {
+                        color: white;
+                        font-weight: v.$fw-bold;
+                        font-size: 17px;
+                    }
+                    textarea:focus {
+                        outline: solid;
+                        border-color: white;
+                        color: white;
+                    }
+                }
+            }
+            #button-container {
+                width: 100%;
+                display: grid;
+                justify-items: end;
+                height: fit-content;
+                button {
+                    width: 100%;
+                    height: 38px;
+                    border-radius: 5px;
+                    border: none;
+                    background: #767950;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    transition: background 500ms linear;
+                    cursor: pointer;
+                    @media (min-width: v.$contact-form-small-width) {
+                        width: 220px;
+                    }
+                    p {
+                        color: #E6EDC5;
+                        font-size: 14px;
+                        font-weight: v.$fw-bold;
+                    }
+                }
+                button:hover {
+                    background: #8a8d61;
+                    transition: background 500ms linear;
+                }
+            }
+        }
+    }
+}
+
+.justify-end {
+    justify-self: center;
+    @media (min-width: v.$contact-form-small-width) {
+        justify-self: end;
+    }
+}
+
+.justify-start {
+    justify-self: center;
+    @media (min-width: v.$contact-form-small-width) {
+        justify-self: start;
+    }}

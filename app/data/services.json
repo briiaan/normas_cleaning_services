@@ -1,0 +1,18 @@
+{
+    "services": {
+        "1": "Move-In / Move-Out Cleaning",
+        "2": "Window Cleaning",
+        "3": "One Time Cleans",
+        "4": "Scheduled Cleans",
+        "5": "New Construction Cleaning",
+        "6": "Apartment Cleaning"
+    },
+    "images": {
+        "0": "pillow.jpeg", 
+        "1": "", 
+        "2": "sink.jpeg",
+        "3": "", 
+        "4": "vacuuming.jpeg", 
+        "5": ""
+    }
+}

@@ -1,0 +1,63 @@
+@use "variables" as v;
+@import 'colors';
+
+:root {
+    --small-width: 595px;
+    --smallplus-width: 600px;
+    --medium-width: 768px;
+    --big-width: 889px;
+    --extrabig-width: 1200px;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: "quicksand";
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.position-fixed {
+    position: fixed !important;
+}
+
+.right-neg5 {
+    right: 0px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.fw-light {
+    font-weight: 300;
+}
+
+.fw-regular {
+    font-weight: 400;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.fw-bold {
+    font-weight: 700;
+}

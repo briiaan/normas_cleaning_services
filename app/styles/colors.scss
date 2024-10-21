@@ -1,0 +1,161 @@
+/* LIST COMPILED BY @3r14ns */
+
+/* CUSTOM COLORS */
+:root {
+    --topbar-darkgrayish-color: #323232;
+    --bars-color: #707070;
+    --box-color: #EEEEEE;
+    --green-s1-color: #AAB08C;
+    --green-s2-color: #E6EDC5;
+    --green-s3-color: #A0B593;
+    --green-s4-color: #8D985E;
+    --green-s5-color: #C1CB92;
+    --green-s6-color: #767950;
+    --green-s7-color: #BEC18D;
+    --green-s8-color: #676F47;
+}
+
+.white { color: white; }
+.black { color: black; }
+.red { color: red; }
+.green { color: green; }
+.blue { color: blue; }
+.yellow { color: yellow; }
+.purple { color: purple; }
+.orange { color: orange; }
+.pink { color: pink; }
+.brown { color: brown; }
+.gray { color: gray; }
+.cyan { color: cyan; }
+.magenta { color: magenta; }
+.aliceblue { color: aliceblue; }
+.antiquewhite { color: antiquewhite; }
+.aqua { color: aqua; }
+.aquamarine { color: aquamarine; }
+.azure { color: azure; }
+.beige { color: beige; }
+.bisque { color: bisque; }
+.blanchedalmond { color: blanchedalmond; }
+.blueviolet { color: blueviolet; }
+.burlywood { color: burlywood; }
+.cadetblue { color: cadetblue; }
+.chartreuse { color: chartreuse; }
+.chocolate { color: chocolate; }
+.coral { color: coral; }
+.cornflowerblue { color: cornflowerblue; }
+.cornsilk { color: cornsilk; }
+.crimson { color: crimson; }
+.darkblue { color: darkblue; }
+.darkcyan { color: darkcyan; }
+.darkgoldenrod { color: darkgoldenrod; }
+.darkgray { color: darkgray; }
+.darkgreen { color: darkgreen; }
+.darkkhaki { color: darkkhaki; }
+.darkmagenta { color: darkmagenta; }
+.darkolivegreen { color: darkolivegreen; }
+.darkorange { color: darkorange; }
+.darkorchid { color: darkorchid; }
+.darkred { color: darkred; }
+.darksalmon { color: darksalmon; }
+.darkseagreen { color: darkseagreen; }
+.darkslateblue { color: darkslateblue; }
+.darkslategray { color: darkslategray; }
+.darkturquoise { color: darkturquoise; }
+.darkviolet { color: darkviolet; }
+.deeppink { color: deeppink; }
+.deepskyblue { color: deepskyblue; }
+.dimgray { color: dimgray; }
+.dodgerblue { color: dodgerblue; }
+.firebrick { color: firebrick; }
+.floralwhite { color: floralwhite; }
+.forestgreen { color: forestgreen; }
+.fuchsia { color: fuchsia; }
+.gainsboro { color: gainsboro; }
+.ghostwhite { color: ghostwhite; }
+.gold { color: gold; }
+.goldenrod { color: goldenrod; }
+.greenyellow { color: greenyellow; }
+.honeydew { color: honeydew; }
+.hotpink { color: hotpink; }
+.indianred { color: indianred; }
+.indigo { color: indigo; }
+.ivory { color: ivory; }
+.khaki { color: khaki; }
+.lavender { color: lavender; }
+.lavenderblush { color: lavenderblush; }
+.lawngreen { color: lawngreen; }
+.lemonchiffon { color: lemonchiffon; }
+.lightblue { color: lightblue; }
+.lightcoral { color: lightcoral; }
+.lightcyan { color: lightcyan; }
+.lightgoldenrodyellow { color: lightgoldenrodyellow; }
+.lightgray { color: lightgray; }
+.lightgreen { color: lightgreen; }
+.lightpink { color: lightpink; }
+.lightsalmon { color: lightsalmon; }
+.lightseagreen { color: lightseagreen; }
+.lightskyblue { color: lightskyblue; }
+.lightslategray { color: lightslategray; }
+.lightsteelblue { color: lightsteelblue; }
+.lightyellow { color: lightyellow; }
+.lime { color: lime; }
+.limegreen { color: limegreen; }
+.linen { color: linen; }
+.maroon { color: maroon; }
+.mediumaquamarine { color: mediumaquamarine; }
+.mediumblue { color: mediumblue; }
+.mediumorchid { color: mediumorchid; }
+.mediumpurple { color: mediumpurple; }
+.mediumseagreen { color: mediumseagreen; }
+.mediumslateblue { color: mediumslateblue; }
+.mediumspringgreen { color: mediumspringgreen; }
+.mediumturquoise { color: mediumturquoise; }
+.mediumvioletred { color: mediumvioletred; }
+.midnightblue { color: midnightblue; }
+.mintcream { color: mintcream; }
+.mistyrose { color: mistyrose; }
+.moccasin { color: moccasin; }
+.navajowhite { color: navajowhite; }
+.navy { color: navy; }
+.oldlace { color: oldlace; }
+.olivedrab { color: olivedrab; }
+.olive { color: olive; }
+.orangered { color: orangered; }
+.papayawhip { color: papayawhip; }
+.peachpuff { color: peachpuff; }
+.peru { color: peru; }
+.plum { color: plum; }
+.powderblue { color: powderblue; }
+.rosybrown { color: rosybrown; }
+.royalblue { color: royalblue; }
+.saddlebrown { color: saddlebrown; }
+.salmon { color: salmon; }
+.sandybrown { color: sandybrown; }
+.seagreen { color: seagreen; }
+.seashell { color: seashell; }
+.sienna { color: sienna; }
+.skyblue { color: skyblue; }
+.slateblue { color: slateblue; }
+.slategray { color: slategray; }
+.snow { color: snow; }
+.springgreen { color: springgreen; }
+.steelblue { color: steelblue; }
+.tan { color: tan; }
+.teal { color: teal; }
+.thistle { color: thistle; }
+.tomato { color: tomato; }
+.turquoise { color: turquoise; }
+.violet { color: violet; }
+.wheat { color: wheat; }
+.whitesmoke { color: whitesmoke; }
+.yellowgreen { color: yellowgreen; }
+.gainsboro { color: gainsboro; }
+.lightgray { color: lightgray; }
+.silver { color: silver; }
+.darkgray { color: darkgray; }
+.gray { color: gray; }
+.dimgray { color: dimgray; }
+.slategray { color: slategray; }
+.lightslategray { color: lightslategray; }
+.darkslategray { color: darkslategray; }
+.black { color: black; }
