@@ -28,6 +28,13 @@
         display: grid;
         grid-template-columns: auto 1fr;
         padding-left: 50px;
+        #text {
+            text-decoration: none;
+            color: white;
+            font-size: 17.5px;
+            position: relative;
+            font-weight: 500;
+        }
         #number-container-topbar {
             #number-a-container {
                 padding-left: 10px;
