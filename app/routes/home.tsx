@@ -1,7 +1,9 @@
-import { ActionFunction, MetaFunction, json, redirect, LoaderFunction} from "@remix-run/node";
-import { Link } from "@remix-run/react";
+import { ActionFunction, MetaFunction, redirect, LoaderFunction } from "react-router";
+import { Link } from "react-router";
 import Homepage from "~/components/homepage";
 import Topbar from "~/components/topbar";
+import { useOutletContext } from "react-router";
+
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,16 +13,10 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+
 export const loader: LoaderFunction = async () => {
   return { hideLink: true };
 }
-
-export const action: ActionFunction = async ({ request }) => {
-  const formData = await request.formData();
-  console.log(formData);
-  // ready to send to a email client.
-  return { success: true };
-};
 
 export default function Index() {
   return (

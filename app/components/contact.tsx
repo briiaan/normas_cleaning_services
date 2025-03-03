@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Form, json, useActionData, useSubmit } from "@remix-run/react";
+import { Form, useActionData, useSubmit } from "react-router";
 import "../styles/contact.scss";
-import { action } from "~/routes/_index";
 import { sanitize } from "~/utilities/functions";
 
 export default function Contact() {
+    const [response, setResponse] = useState({ success: null })
     const [formData, setFormData] = useState({ first_name: "", last_name: "", city: "", email: "", phone: "", subject: "", message: ""})
     const [actionData, setActionData] = useState({})
     const submit = useSubmit();
@@ -67,16 +67,28 @@ export default function Contact() {
         data.append("subject", formData.subject)
         if (Object.keys(action_data).length > 0) {
             setActionData(action_data)
-        } else {
-            submit(data, { method: "post" });
-            const section = document.querySelector(`#contact-form-container-grid`);
-            if (section) {
-                section.scrollIntoView({ behavior: "smooth" })
-            }
-        }
-        // Submit the form data to the root index route ("/")
-      };
+        } else {            
+            submit(data, { method: "POST", action: "/" });
+            setResponse({success: true})
 
+            // **Clear form fields**
+        setFormData({
+            first_name: "",
+            last_name: "",
+            city: "",
+            email: "",
+            phone: "",
+            subject: "",
+            message: "",
+        });
+
+        // **Clear input field values**
+        Object.values(refs).forEach(ref => {
+            if (ref.current) ref.current.value = "";
+        });
+        }        
+      };
+      
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         handleDataChange(name, value);
@@ -90,6 +102,14 @@ export default function Contact() {
         }
     }
       }, [actionData])
+
+      useEffect(() => {
+        if (response.success) {
+            const timer = setTimeout(() => {
+                setResponse({ success: null });
+            }, 5000);
+            return () => clearTimeout(timer);
+        }      }, [response])
 
       return (
         <>
@@ -134,8 +154,14 @@ export default function Contact() {
                         </div>
                     </div>
                     <div id="button-container">
-                        <button type="submit" id="button" onClick={handleSubmit}><p>Submit</p></button>
+                        <button type="button" id="button" onClick={handleSubmit}><p>Submit</p></button>
                     </div>
+                    {response?.success ? (
+    <p className="success-message">Message sent!</p>
+) : response?.error ? (
+    <p className="fail-message">Message could not be sent. Please try again.</p>
+) : null}
+
                 </form>
             </div>
         </div>

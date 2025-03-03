@@ -235,3 +235,18 @@
     @media (min-width: v.$contact-form-small-width) {
         justify-self: start;
     }}
+
+
+.success-message {
+    border-width: 2px;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+}
+
+.fail-message {
+    border-width: 2px;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+}
